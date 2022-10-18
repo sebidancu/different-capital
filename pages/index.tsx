@@ -62,14 +62,21 @@ const Home: NextPage = () => {
                 allowFullScreen
               ></iframe> */}
 
-              
-                <iframe className="mt-4 h-44 w-full md:h-72 lg:h-96" 
+              {/* <iframe className="mt-4 h-44 w-full md:h-72 lg:h-96" 
                   src="https://player.vimeo.com/video/761609342?h=7ed82aa50f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479?"
                   allow="autoplay; fullscreen; picture-in-picture"                  
                   title="Video02_FullDraft02.mp4"
+                ></iframe> */}
+
+              
+                <iframe className="mt-4 h-44 w-full md:h-72 lg:h-96"
+                  src="https://player.vimeo.com/video/761609342?h=7ed82aa50f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  
+                  title="Video02_FullDraft02.mp4"
                 ></iframe>
               
-              
+              {/* <script src="https://player.vimeo.com/api/player.js"></script> */}
             </div>
           </div>
 
