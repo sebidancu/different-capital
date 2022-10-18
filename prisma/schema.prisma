@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model votes {
+  id           Int    @id @default(autoincrement())
+  email        String @default("0") @db.VarChar(255)
+  firstChoice  Int    @default(0) @db.SmallInt
+  secondChoice Int    @default(0) @db.SmallInt
+  thirdChoice  Int    @default(0) @db.SmallInt
+  fourthChoice Int    @default(0) @db.SmallInt
+}

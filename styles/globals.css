@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+footer {
+    background-image: url('../public/footer_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.menu-bg {
+    background-image: url('../public/menu-background.png');
+    background-size: cover;
+    background-position: top center;
+    padding: 13px 0;
+    width: 100%;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #8E0D92;
+    background-color: #8E0D92;
+}
+
+.custom-radio {
+    accent-color: #8E0D92;
+}
+
+.section-separator {
+    background-image: url('../public/why_us-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.section-separator-footer {
+    background-image: url('../public/footer_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    margin-top: 80px;
+    padding-top: 80px;
+}
+
+.vote-btn {
+    font-size: 18px;
+    background: #8E0D92;
+    border-radius: 4px;
+    padding: 5px 16px;
+    border: 1px solid #8E0D92;
+    color: white;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+}
+
+.vote-btn:hover {
+    border: 1px solid #fff;
+    background: transparent;
+    color: white;
+}
+
+.vote-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.vote-btn:disabled:hover {
+    border: 1px solid #8E0D92;
+    color: white;
+    background: #8E0D92;
+}
+
+.parallax-window-bubbles {
+    background-image: url('../public/bubbles_test-0712-2.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0;
+    min-height: 100%;
+    -webkit-transition: .1s linear;
+    -moz-transition: .1s linear;
+    -o-transition: .1s linear;
+    -webkit-transition-property: background-position;
+    -moz-transition-property: background-position;
+    -o-transition-property: background-position;
+}
+
+.parallax-window-meteors {
+    background-image: url('../public/homepage.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0;
+    min-height: 100%;
+    -webkit-transition: .1s linear;
+    -moz-transition: .1s linear;
+    -o-transition: .1s linear;
+    -webkit-transition-property: background-position;
+    -moz-transition-property: background-position;
+    -o-transition-property: background-position;
+}
+
+.parallax-window-bubbles.paralax-window-bubbles-about {
+    background-image: url('../public/about-us-desktop.webp');
+}
+
+@media screen and (max-width: 992px) {
+    .parallax-window-bubbles {
+        background-image: url('../public/homepage-bubbles-tablet.webp');
+    }
+
+    .parallax-window-meteors {
+        background-image: none;
+    }
+
+    .parallax-window-bubbles.paralax-window-bubbles-about {
+        background-image: url('../public/homepage-bubbles-tablet.webp');
+    }
+
+    .menu-bg {
+        background-image: url('../public/menu-background-tablet.png');
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .parallax-window-bubbles {
+        background-image: url('../public/homepage-bubbles-mobile.webp');
+    }
+
+    .parallax-window-bubbles.paralax-window-bubbles-about {
+        background-image: url('../public/homepage-bubbles-mobile.webp');
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        padding-top: 70px;
+        padding-bottom: 44px;
+        background-image: url(../public/footer-background-mobile.svg);
+    }
+}
