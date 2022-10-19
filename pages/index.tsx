@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import $ from "jquery";
 import { useEffect } from "react";
 import { Pool } from "../components/Pool";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -40,7 +41,7 @@ const Home: NextPage = () => {
           <Pool />
 
           <div className="container mx-auto mt-6 px-4 lg:mt-10">
-            <div className="grid gap-4 lg:grid-cols-2">
+            <div className="grid sm:gap-4 lg:grid-cols-2">
               <div>
                 <div className="mb-4 mt-2 text-center text-5xl font-semibold text-white md:mt-8 md:text-left md:text-7xl">
                   <span className="text-primary">Who</span> we {""}
@@ -51,36 +52,36 @@ const Home: NextPage = () => {
                   experienced crypto investors and entrepreneurs, aiming to fund
                   ambitious and innovative projects in the Web3 space.
                 </p>
+                <div className="survey mt-4 -ml-3 flex flex-col items-center text-lg font-semibold  lg:items-start">
+                  <div className="flex w-64 flex-col rounded-lg border-2 border-violet-600 p-4 lg:mt-14">
+                  <div><span className="text-violet-600"><Link href="/#what-we-do">I. </Link></span><span style={{color:"#ffffffb8"}}><Link href="/#what-we-do">What we do</Link></span></div>
+
+                  <div><span className="text-violet-600"><Link href="/#partners">II. </Link></span><span style={{color:"#ffffffb8"}}><Link href="/#partners">Our Partners</Link></span></div>
+
+                  <div><span className="text-violet-600"><Link href="/#vision">III. </Link></span><span style={{color:"#ffffffb8"}}><Link href="/#vision">Our Vision</Link></span></div>
+
+                  <div><span className="text-violet-600"><Link href="/#proposal">IV. </Link></span><span style={{color:"#ffffffb8"}}><Link href="/#proposal">Our Proposal</Link></span></div>
+
+                  <div><span className="text-violet-600"><Link href="/#how-it-works">V. </Link></span><span style={{color:"#ffffffb8"}}><Link href="/#how-it-works">What we do</Link></span></div>
+
+                  <div><span className="text-violet-600"><Link href="/#escrow">VI. </Link></span><span style={{color:"#ffffffb8"}}><Link href="/#escrow">Escrow service</Link></span></div>
+                  </div>
+                </div>
               </div>
 
-              {/* <iframe
-                className="mt-4 h-44 w-full md:h-72 lg:h-96"
-                src="https://www.youtube.com/embed/QAC5ZHVah78?modestbranding=1"
-                title="YouTube video player"
-                
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe> */}
-
-              {/* <iframe className="mt-4 h-44 w-full md:h-72 lg:h-96" 
-                  src="https://player.vimeo.com/video/761609342?h=7ed82aa50f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479?"
-                  allow="autoplay; fullscreen; picture-in-picture"                  
-                  title="Video02_FullDraft02.mp4"
-                ></iframe> */}
-
-              
-                <iframe className="mt-4 h-44 w-full md:h-72 lg:h-96"
-                  src="https://player.vimeo.com/video/761767191?h=239d9318ae&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  
-                  title="Video02_FullDraft02.mp4"
-                ></iframe>
-              
-              {/* <script src="https://player.vimeo.com/api/player.js"></script> */}
+              <iframe
+                className="h-72 w-full md:h-80 lg:h-96"
+                src="https://player.vimeo.com/video/761767191?h=239d9318ae&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                allow="autoplay; fullscreen; picture-in-picture"
+                title="Presentation.mp4"
+              ></iframe>
             </div>
           </div>
 
-          <div className="section-separator mt-10 pt-14 md:mt-20 md:pt-20">
+          <div
+            className="section-separator pt-14 md:mt-10 md:pt-20"
+            id="what-we-do"
+          >
             <div className="container mx-auto  px-4 ">
               <div className="mb-16 text-center">
                 <h2 className="text-5xl font-semibold text-white">
@@ -114,60 +115,77 @@ const Home: NextPage = () => {
 
               <div className="flex flex-wrap items-center justify-center gap-4 pt-10 md:gap-10">
                 <div className="flex flex-col items-center justify-center text-white">
-                  <img src="/itheum.png" alt="itheum-logo" width={150} />
+                  <img src="/itheum-logo.png" alt="itheum-logo" width={150} />
                   <span className="text-lg font-semibold">
-                    MAX ROI: <span className="text-primary">48x</span>
-                  </span>
-                </div>
-
-                <div className="flex flex-col items-center justify-center text-white">
-                  <img src="/holoride.png" alt="holoride-logo" width={150} />
-                  <span className="text-lg font-semibold">
-                    MAX ROI: <span className="text-primary">375x</span>
-                  </span>
-                </div>
-
-                <div className="flex flex-col items-center justify-center text-white">
-                  <img src="/bh.png" alt="bhat-logo" width={150} />
-                  <span className="text-lg font-semibold">
-                    MAX ROI: <span className="text-primary">12x</span>
-                  </span>
-                </div>
-
-                <div className="flex flex-col items-center justify-center text-white">
-                  <img src="/aoz.png" alt="age-of-zamolxis-logo" width={150} />
-                  <span className="text-lg font-semibold">
-                    MAX ROI: <span className="text-primary">5x</span>
+                    <span className="opacity-60">MAX ROI: </span>
+                    <span className="text-primary">48x</span>
                   </span>
                 </div>
 
                 <div className="flex flex-col items-center justify-center text-white">
                   <img
-                    src="/cantina.png"
+                    src="/holoride-logo.png"
+                    alt="holoride-logo"
+                    width={150}
+                  />
+                  <span className="text-lg font-semibold">
+                    <span className="opacity-60">MAX ROI: </span>
+                    <span className="text-primary">375x</span>
+                  </span>
+                </div>
+
+                <div className="flex flex-col items-center justify-center text-white">
+                  <img src="/bhat-logo.png" alt="bhat-logo" width={150} />
+                  <span className="text-lg font-semibold">
+                    <span className="opacity-60">MAX ROI: </span>
+                    <span className="text-primary">12x</span>
+                  </span>
+                </div>
+
+                <div className="flex flex-col items-center justify-center text-white">
+                  <img
+                    src="/age-of-zamolxis-logo.png"
                     alt="age-of-zamolxis-logo"
                     width={150}
                   />
                   <span className="text-lg font-semibold">
-                    MAX ROI: <span className="text-primary">15x</span>
+                    <span className="opacity-60">MAX ROI: </span>
+                    <span className="text-primary">5x</span>
                   </span>
                 </div>
 
                 <div className="flex flex-col items-center justify-center text-white">
-                  <img src="/ashswap.png" alt="ash-swap-logo" width={150} />
-                  <span className="text-lg font-semibold">unreleased</span>
+                  <img src="/cantina-logo.png" alt="cantina-logo" width={150} />
+                  <span className="text-lg font-semibold">
+                    <span className="opacity-60">MAX ROI: </span>
+                    <span className="text-primary">15x</span>
+                  </span>
                 </div>
 
                 <div className="flex flex-col items-center justify-center text-white">
                   <img
-                    src="/Cathena.png"
+                    src="/ash-swap-logo.png"
+                    alt="ash-swap-logo"
+                    width={150}
+                  />
+                  <span className="text-lg font-semibold opacity-60">
+                    unreleased
+                  </span>
+                </div>
+
+                <div className="flex flex-col items-center justify-center text-white">
+                  <img
+                    src="/knights-of-cathena-logo.png"
                     alt="knights-of-cathena-logo"
                     width={150}
                   />
-                  <span className="text-lg font-semibold">unreleased</span>
+                  <span className="text-lg font-semibold opacity-60">
+                    unreleased
+                  </span>
                 </div>
               </div>
 
-              <div className="my-16 text-center">
+              <div className="my-16 text-center" id="partners">
                 <h2 className="text-5xl font-semibold text-white">
                   Our Partners
                 </h2>
@@ -191,21 +209,32 @@ const Home: NextPage = () => {
 
               <div className="flex flex-wrap items-center justify-center gap-4 pt-10 md:gap-10">
                 <div className="flex flex-col items-center justify-center text-white">
-                  <img src="/morningstar.png" alt="ashswap-logo" width={250} />
+                  <img
+                    src="/morning-star-logo.png"
+                    alt="morningstar-logo"
+                    className="w-60"
+                  />
                   <span className="text-lg font-semibold">
                     Morningstar Ventures
                   </span>
                 </div>
 
                 <div className="flex flex-col items-center justify-center text-white">
-                  <img src="/istari.png" alt="ashswap-logo" width={250} />
+                  <img
+                    src="/istari-vision-logo.png"
+                    alt="istari-logo"
+                    className="w-60"
+                  />
                   <span className="text-lg font-semibold">Istari Vision</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="section-separator mt-10 pt-14 md:mt-20 md:pt-20">
+          <div
+            className="section-separator mt-10 pt-14 md:mt-20 md:pt-20"
+            id="vision"
+          >
             <div className="container mx-auto  px-4 ">
               <div className="mb-16 text-center">
                 <h2 className="text-5xl font-semibold text-white">
@@ -218,11 +247,11 @@ const Home: NextPage = () => {
                   Our aim going forward is to continue supporting the Elrond
                   ecosystem, as well as expanding our operations and deploying
                   capital to disruptive projects across all the Web3 space.{" "}
-                  <br /> <br />
+                </p>
+
+                <p className="mt-4 text-custom">
                   Our plan of expansion consists of{" "}
-                  <strong className="text-primary">
-                    building a community
-                  </strong>{" "}
+                  <strong className="text-primary">building a community</strong>{" "}
                   of high-level, enthusiastic and educated investors in order to
                   <strong className="text-primary">
                     {" "}
@@ -232,11 +261,10 @@ const Home: NextPage = () => {
                   of smart and supportive individuals that will back - and
                   contribute to the project, in addition to our expertise and of
                   course, monetary stimulus.
-                  <br /> <br />
                 </p>
               </div>
 
-              <p className="text-xl text-custom">
+              <p className="mt-4 text-xl text-custom">
                 This creates a{" "}
                 <strong className="text-primary">
                   mutually beneficial relationship
@@ -269,75 +297,72 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="section-separator mt-10 pt-14 md:mt-20 md:pt-20">
-            <div className="mb-16 text-center">
-              <h2 className="text-5xl font-semibold text-white">
-                Our proposal
-              </h2>
-            </div>
-
-            <p className="text-center text-xl text-custom">
-              In order to make this ambitious plan work, we are proposing an
-              innovative,{" "}
-              <strong className="text-primary">hybrid architecture</strong>:
-            </p>
-
-            <div className="grid gap-10 px-4 text-center md:grid-cols-3">
-              
-
-              <div className="">
-                <img className="img-fluid" src="/secure.svg" alt="Icon" />
-                <h3 className="text-2xl font-semibold text-white">
-                  The Allocation
-                </h3>
-                <p className="mt-4 text-xl text-custom">
-                  We propose a standard $1000 allocation to every project for
-                  each participating investor. This allocation size is well
-                  above the industry standard proposed by some of the largest
-                  Launchpads in the Web3 space.
-                </p>
-                <p
-                  className="mt-4 text-xl text-custom"
-                  style={{ fontSize: "16px", opacity: "0.5" }}
-                >
-                  *note that the launchpad allocations are for public rounds,
-                  which are always higher than private round prices.*
-                </p>
+          <div
+            className="section-separator mt-10 pt-14 md:mt-20 md:pt-20"
+            id="proposal"
+          >
+            <div className="container mx-auto px-4">
+              <div className="mb-16 text-center">
+                <h2 className="text-5xl font-semibold text-white">
+                  Our proposal
+                </h2>
               </div>
 
-              <div className="">
-                <img
-                  className="img-fluid"
-                  src="/non_custodial.svg"
-                  alt="Icon"
-                />
-                <h3 className="text-2xl font-semibold text-white">Consensus</h3>
-                <p className="mt-4 text-xl text-custom">
-                  <strong className="text-primary">
-                    We pledge to negotiate
-                  </strong>{" "}
-                  the allocation sizes with every project in order to achieve{" "}
-                  <strong className="text-primary">the promised $1000</strong>{" "}
-                  per investor
-                </p>
-              </div>
+              <p className="text-center text-xl text-custom">
+                In order to make this ambitious plan work, we are proposing an
+                innovative,{" "}
+                <strong className="text-primary">hybrid architecture</strong>:
+              </p>
 
-              <div>
-                <img className="img-fluid" src="/transparent.svg" alt="Icon" />
-                <h3 className="text-2xl font-semibold text-white">
-                  Transparency
-                </h3>
-                <p className="mt-4 text-xl text-custom">
-                  We pledge{" "}
-                  <strong className="text-primary">full transparency</strong> of
-                  our operations
-                </p>
+              <div className="grid gap-10 text-center md:grid-cols-2">
+                <div className="flex flex-col items-center">
+                  <img src="/transparent.svg" alt="Icon" />
+                  <h3 className="text-2xl font-semibold text-white">
+                    The Allocation
+                  </h3>
+                  <p className="mt-4 text-xl text-custom">
+                    We propose a standard $1000 allocation to every project for
+                    each participating investor. This allocation size is well
+                    above the industry standard proposed by some of the largest
+                    Launchpads in the Web3 space.
+                  </p>
+                  <p className="mt-4 text-base text-custom opacity-60">
+                    *note that the launchpad allocations are for public rounds,
+                    which are always higher than private round prices.*
+                  </p>
+                </div>
+
+                <div className="flex flex-col items-center">
+                  <img src="/secure.svg" alt="Icon" />
+                  <h3 className="text-2xl font-semibold text-white">
+                    Consensus
+                  </h3>
+                  <p className="mt-4 text-xl text-custom">
+                    <strong className="text-primary">
+                      We pledge to negotiate
+                    </strong>{" "}
+                    the allocation sizes with every project in order to achieve{" "}
+                    <strong className="text-primary">the promised $1000</strong>{" "}
+                    per investor
+                  </p>
+                  <h3 className="mt-4 text-2xl font-semibold text-white">
+                    Transparency
+                  </h3>
+                  <p className="mt-4 text-xl text-custom">
+                    We pledge{" "}
+                    <strong className="text-primary">full transparency</strong>{" "}
+                    of our operations
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="section-separator mt-10 pt-14 md:mt-20 md:pt-20">
-            <div className="container mx-auto  px-4">
+          <div
+            className="section-separator mt-10 pt-14 md:mt-20 md:pt-20"
+            id="how-it-works"
+          >
+            <div className="container mx-auto px-4">
               <div className="mb-16 text-center">
                 <h2 className="text-5xl font-semibold text-white">
                   How it works
@@ -347,9 +372,9 @@ const Home: NextPage = () => {
               <div className="grid items-center justify-center gap-10 lg:grid-cols-2">
                 <p className="text-xl text-custom">
                   We plan to offer{" "}
-                  <strong className="text-primary">60 access tickets</strong>{" "}
-                  for the community investors in the form of NFTs, which will be
-                  sold at $10,000 each. That translates to a $50,000 allocation
+                  <strong className="text-primary">50 access tickets</strong>{" "}
+                  for the community investors in the form of NFTs, which start
+                  at a price of $10,000. That translates to a $50,000 allocation
                   for the community for each project, an allocation size which
                   we are 100% confident we can secure. We will create the
                   infrastructure on our website to{" "}
@@ -372,14 +397,11 @@ const Home: NextPage = () => {
               </div>
 
               <div className="mt-10 grid items-center justify-center gap-4 lg:grid-cols-2 lg:gap-10">
-                <div className="order-2 flex justify-center lg:order-1">
-                  <img
-                    className="img-fluid"
-                    src="/how-it-works-two.png"
-                    alt="Icon"
-                    width={150}
-                  />
-                </div>
+                <p className="order-2 flex justify-center text-xl text-custom lg:order-1">
+                  The price of the Access Tickets will gradually rise as we
+                  approach the completion of the fundraising. Come back here
+                  soon in order to find a fully detailed price breakdown !
+                </p>
 
                 <p className="ld:order-2 order-1 text-xl text-custom">
                   Every member of the community has got{" "}
@@ -400,7 +422,10 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="section-separator mt-10 pt-14 md:mt-20 md:pt-20">
+          <div
+            className="section-separator mt-10 pt-14 md:mt-20 md:pt-20"
+            id="escrow"
+          >
             <div className="container mx-auto  px-4">
               <div className="mb-16 text-center">
                 <h2 className="text-5xl font-semibold text-white">
@@ -435,26 +460,28 @@ const Home: NextPage = () => {
                 to acquire the tokens at the{" "}
                 <strong className="text-primary">best possible prices</strong>.
               </p>
-              <br /> <br />
-              <p className="text-xl text-custom">
+              <p className="mt-4 text-xl text-custom">
                 We do not impose any strict guidelines for this service,
                 therefore D1fferent Capital will cooperate closely with the
                 community in order to deliver the best service, regardless of
                 the particularities of each individual investment.
               </p>
-              <br /> <br />
-              <p className="text-xl text-custom">
+
+              <p className="mt-4 text-xl text-custom">
                 As a further incentive, as we are going to fully dedicate our
                 time and resources to grow the organization, we also expect the
                 value of the access tickets to grow proportionally, as they will
                 be permisionlessly tradable.
               </p>
-              <br /> <br />
-              <p className="text-xl text-custom">
+
+              <p className="mt-4 text-xl font-semibold text-white">
+                Disclaimer:
+              </p>
+              <p className="mt-1 text-xl text-custom">
                 D1fferent Capital reserves its right to delay token
                 distributions to the community members on the request of any
                 collaborating project. This lines up with the professionalism
-                and business ethic of D1fferent Capital and preserves our status
+                and business ethic of D1fferent Capital and preserves its status
                 of being a reliable strategic partner to every project.
               </p>
             </div>
@@ -482,30 +509,6 @@ const Home: NextPage = () => {
                       />
                     </a>
                     <a
-                      href="https://facebook.com/d1fferent.capital"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <img
-                        width="56"
-                        src="/facebook.svg"
-                        alt="Social Icon"
-                        className="img-fluid"
-                      />
-                    </a>
-                    <a
-                      href="https://www.linkedin.com/company/d1fferent.capital"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <img
-                        width="56"
-                        src="/linkedin.svg"
-                        alt="Social Icon"
-                        className="img-fluid"
-                      />
-                    </a>
-                    <a
                       href="https://www.instagram.com/d1fferent.capital/"
                       target="_blank"
                       rel="noreferrer"
@@ -518,7 +521,7 @@ const Home: NextPage = () => {
                       />
                     </a>
                     <a
-                      href="https://t.me/d1fferentcapital"
+                      href="https://t.me/d1fferentdc50"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -543,7 +546,7 @@ const Home: NextPage = () => {
           </div>
           <div className="bg-footer p-6">
             <div className="text-center">
-              <p className="inline-block text-xl text-custom">
+              <p className="inline-block px-2 text-xl text-custom">
                 © 2022, D1fferent Capital
               </p>
               <a
