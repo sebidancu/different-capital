@@ -70,7 +70,7 @@ const Home: NextPage = () => {
 
               
                 <iframe className="mt-4 h-44 w-full md:h-72 lg:h-96"
-                  src="https://player.vimeo.com/video/761609342?h=7ed82aa50f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                  src="https://player.vimeo.com/video/761767191?h=239d9318ae&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                   allow="autoplay; fullscreen; picture-in-picture"
                   
                   title="Video02_FullDraft02.mp4"
@@ -283,27 +283,12 @@ const Home: NextPage = () => {
             </p>
 
             <div className="grid gap-10 px-4 text-center md:grid-cols-3">
-              <div className="">
-                <img
-                  className="img-fluid"
-                  src="/non_custodial.svg"
-                  alt="Icon"
-                />
-                <h3 className="text-2xl font-semibold text-white">Best Deal</h3>
-                <p className="mt-4 text-xl text-custom">
-                  <strong className="text-primary">
-                    We pledge to negotiate
-                  </strong>{" "}
-                  the allocation sizes with every project in order to achieve{" "}
-                  <strong className="text-primary">the promised $1000</strong>{" "}
-                  per investor
-                </p>
-              </div>
+              
 
               <div className="">
                 <img className="img-fluid" src="/secure.svg" alt="Icon" />
                 <h3 className="text-2xl font-semibold text-white">
-                  Allocation
+                  The Allocation
                 </h3>
                 <p className="mt-4 text-xl text-custom">
                   We propose a standard $1000 allocation to every project for
@@ -317,6 +302,23 @@ const Home: NextPage = () => {
                 >
                   *note that the launchpad allocations are for public rounds,
                   which are always higher than private round prices.*
+                </p>
+              </div>
+
+              <div className="">
+                <img
+                  className="img-fluid"
+                  src="/non_custodial.svg"
+                  alt="Icon"
+                />
+                <h3 className="text-2xl font-semibold text-white">Consensus</h3>
+                <p className="mt-4 text-xl text-custom">
+                  <strong className="text-primary">
+                    We pledge to negotiate
+                  </strong>{" "}
+                  the allocation sizes with every project in order to achieve{" "}
+                  <strong className="text-primary">the promised $1000</strong>{" "}
+                  per investor
                 </p>
               </div>
 
@@ -375,6 +377,7 @@ const Home: NextPage = () => {
                     className="img-fluid"
                     src="/how-it-works-two.png"
                     alt="Icon"
+                    width={150}
                   />
                 </div>
 
